@@ -32,7 +32,7 @@
   "dependencies": {
     "@dnd-kit/accessibility": "^3.0.0",
     "@dnd-kit/utilities": "^3.2.1",
-    "tslib": "^2.0.0",
+    "tslib": "^2.5.0",
     "use-sync-external-store": "^1.2.0"
   },
   "publishConfig": {
