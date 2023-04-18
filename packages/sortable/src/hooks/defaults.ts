@@ -5,12 +5,29 @@ import {arrayMove} from '../utilities';
 
 import type {AnimateLayoutChanges, SortableTransition} from './types';
 
-export const defaultNewIndexGetter: NewIndexGetter = ({
+export const archiveDefaultNewIndexGetter: NewIndexGetter = ({
   id,
   items,
   activeIndex,
   overIndex,
 }) => arrayMove(items, activeIndex, overIndex).indexOf(id);
+
+export const defaultNewIndexGetter: NewIndexGetter = ({
+  id,
+  items,
+  activeIndex,
+  overIndex,
+}) => {
+  const index = items.indexOf(id);
+
+  if (activeIndex > index && overIndex < index) {
+    return index + 1;
+  }
+  if (activeIndex < index && overIndex > index) {
+    return index - 1;
+  }
+  return index;
+};
 
 export const defaultAnimateLayoutChanges: AnimateLayoutChanges = ({
   containerId,
