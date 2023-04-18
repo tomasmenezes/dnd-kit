@@ -58,6 +58,8 @@
   "resolutions": {
     "prettier": "^2.2.0",
     "jest": "^27.0.5",
-    "ts-jest": "^27.0.3"
+    "ts-jest": "^27.0.3",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11"
   }
 }
